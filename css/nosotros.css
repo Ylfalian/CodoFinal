@@ -1,0 +1,337 @@
+
+/*NavBar*/
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255)
+}
+
+
+ul {
+    list-style: none;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.623);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 30px;
+    height: auto;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/*Foto portada*/
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Images/nosotros.webp);
+    filter: brightness(0.6);
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.header-content {
+    margin-bottom: 150px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-content h1 {
+    font-size: 6vmin;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.header-content h2 {
+    font-size: 10vmin;
+    text-align: center;
+    padding: 0;
+}
+
+.line {
+    width: 200px;
+    height: 4px;
+    background: rgb(8, 174, 220);
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+
+/*Body*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poltawski Nowy', serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: rgb(44, 44, 44);
+}
+
+
+
+p,
+h1,
+h2 {
+    padding-left: 50px;
+    color: aliceblue;
+    text-align: center;
+}
+
+.nosotros-container h1 {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.nosotros-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.text {
+    width: 50%;
+}
+#text-nosotros {
+    text-align: justify;
+}
+
+.img-text {
+    width: 40%;
+}
+#nosotros {
+    margin-left: 30px;
+    width: 100%;
+    height: 520px;
+    border-radius: 50px;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.Staff-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    padding: 20px;
+}
+
+#Staff-text {
+    padding-top: 50px;
+    text-align: center;
+}
+
+#nos {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+form {
+    margin: 50px;
+    color: white;
+
+}
+
+
+/* Footer*/
+
+.footer{
+    width: 100%;
+    background: rgb(7, 7, 7);
+}
+
+.colum{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ede6de;
+    padding: 5px;
+    text-align: center;
+}
+
+.mapa{
+    width: 100%;
+}
+
+.mapa p{
+    padding-bottom: 8px;
+}
+
+.mapa iframe{
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 0 8px 2px rgba(43, 43, 43, 0.842);
+    height: 320px;
+}
+
+.row1 {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-direction: row;
+    color: #ede6ded3;
+    padding-top: 10px;
+}
+
+.sucursales{
+    width: 40%;
+    text-align: center;
+}
+
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-links ul, li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.list-inline-item i{
+    padding: 10px;
+}
+
+.footer-copyright{
+    width: 100%;
+    text-align: center;
+    color: #ede6de;
+}
+
+/* Responsive media
+*/
+
+@media only screen and (max-width:850px){
+    .navbar {
+        padding:0;
+    }
+    .logo {
+        position: absolute;
+        top:30px;
+        left: 30px;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        /*        background:rgba(8, 174, 220, 0.652) ;*/
+        margin-top: -900px;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu {
+        margin-top: 0px;
+       /* border-bottom-right-radius: 288px; si le agregamos el backroung celeste podemos darle
+       un estilo al borde */
+    }
+    .nav-links li {
+        margin: 30px auto;
+    }
+    .menu-btn {
+        display: block;
+        background:rgba(8, 174, 220, 0.686);
+        border-radius: 6px;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .excursiones-content{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .excursiones-content{
+        width: 100%;
+        text-align: center;
+    }
+    .tarj-tour {
+        width: 260px;
+    }
+
+    .image-tours img {
+        height: 209px;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

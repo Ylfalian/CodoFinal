@@ -1,0 +1,415 @@
+ /*NavBar*/
+
+ a {
+    text-decoration: none;
+    color: rgb(255, 255, 255)
+}
+
+/*agregar hover
+a:hover {
+
+  }
+*/
+ul {
+    list-style: none;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.623);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li{
+    margin: 0 30px;
+    height: auto;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/*Foto portada*/
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Images/cataratas.jpg);
+    filter: brightness(0.6);
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.header-content {
+    margin-top: 50px;
+    margin-bottom: 150px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.header-content h1{
+    font-size: 7vmin;
+    
+}
+.header-content h2 {
+    font-size: 4vmin;
+}
+
+.line {
+    width: 170px;
+    height: 4px;
+    background: rgb(8, 174, 220);
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/*Body */
+body{
+    background-color: rgb(219, 219, 219);
+    align-items: center;
+}
+
+/*TARJETAS DE PAQUETES*/
+.pack{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.tarjeta {
+    background: rgb(42,170,196);
+    background: linear-gradient(21deg, rgba(42,170,196,1) 33%, rgba(155,158,159,0.8729866946778712) 57%);
+    width: 300px;
+    padding: 40px;  
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin: 10px;
+    }
+    .tarjeta img {
+    width: 200px;
+    height: 100px;
+    border-radius: 30px;
+    }
+    .tarjeta h2 {
+    color:black;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    text-align: center;
+    
+    }
+    .tarjeta p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+    }
+    .tarjeta button {
+    background-color:forestgreen;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    }
+    
+    /* Footer*/
+
+.footer{
+    width: 100%;
+    background: rgb(7, 7, 7);
+}
+
+.colum{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ede6de;
+    text-align: center;
+}
+
+.mapa{
+    width: 100%;
+}
+
+.mapa p{
+    padding-bottom: 8px;
+}
+
+.mapa iframe{
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 0 8px 2px rgba(43, 43, 43, 0.842);
+    height: 320px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    color: #ede6ded3;
+    padding-top: 10px;
+}
+
+.sucursales{
+    width: 40%;
+    text-align: center;
+}
+
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-links ul, li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.list-inline-item i{
+    padding: 10px;
+}
+
+.footer-copyright{
+    width: 100%;
+    text-align: center;
+    color: #ede6de;
+}
+
+
+@media only screen and (max-width:850px){
+    .navbar {
+        padding:0;
+    }
+    .logo {
+        position: absolute;
+        top:30px;
+        left: 30px;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        /*        background:rgba(8, 174, 220, 0.652) ;*/
+        margin-top: -900px;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu {
+        margin-top: 0px;
+       /* border-bottom-right-radius: 288px; si le agregamos el backroung celeste podemos darle
+       un estilo al borde */
+    }
+    .nav-links li {
+        margin: 30px auto;
+    }
+    .menu-btn {
+        display: block;
+        background:rgba(8, 174, 220, 0.686);
+        border-radius: 6px;
+    }
+}
+
+/* /////////////////////////////////////////////////////////// */
+
+/* RESETEADO */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TITULO */
+.container h1{
+    text-align: center;
+    /* font-family: 'Roboto', sans-serif; */
+    font: bold;
+    margin: 30px 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* TABLA CARRITO DE COMPRAS */
+.table{
+    margin: 0 0 30px 0;
+}
+
+/* BOTON COMPRAR */
+.botonCompra #btnComprar{
+    background-color: rgb(99, 255, 47);
+    color: black;
+    outline: 1px solid rgb(232, 251, 27);
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 20px;
+    transition: all .5s;
+    display: none;
+}
+
+.botonCompra .btnComprar.active{
+    transition: .3s ease all;
+    display: flex;
+}
+
+
+.botonCompra #btnComprar:hover{
+    background-color: rgb(52, 255, 79);
+    outline: 1px solid rgb(169, 255, 32);
+}
+.botonCompra #btnComprar:active{
+    background-color: rgba(000,255, 000, 127);
+}
+
+/* VENTANA EMERGENTE - CONFIRMACION COMPRA */
+.overlay{
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+.popup{
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.5);
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    height: 8.5rem;
+    transition: .5s ease all;
+    transform: scale(.7);
+    opacity: 1;
+
+}
+
+.popup .btn-cerrar-popup{
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+    transition: .3s ease all;
+}
+.popup .btn-cerrar-popup:hover{
+    color: #000;
+}
+
+.popup h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+.popup form .btn-submit {
+    padding: 0 40px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #BBBBBB;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s ease all;
+}
+
+.popup form .btn-submit:hover{
+    opacity: .9;
+}
+.popup form .btn-submit:active{
+    opacity: .8;
+}
+
+/* ANIMACIONES VENTANA EMERGENTE */
+.popup.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.popup.active h3{
+    animation: entrada .8s ease .3s forwards;
+    /* nombreAnimacion, duracion, tiempo */
+
+
+}
+
+
+/* TARJETA ARREGLOS */
+.h6Unidades{
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 0;
+    display: block;
+    opacity: .5;
+}
+
+.pPrecio{
+    margin-bottom: 0px;
+}
+
+/* animacion */
+@keyframes entrada{ 
+    from{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card-body{
+    margin: 5px 10px;
+    border-top: 1px solid #BBBBBB;
+    border-radius: 0 15px 0 0;
+}
+
+
+.card-img-top{
+    width: 100%;
+    height: 243px;
+    object-fit: contain;
+}
+

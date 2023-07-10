@@ -1,0 +1,18 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(20, 16, 16);
+    padding-top: 30px;
+    
+    
+}
+
+.formulario{
+    background: linear-gradient(21deg, rgb(87, 149, 231) 33%, rgba(139, 149, 153, 0.873) 57%);
+    border-radius: 10px;
+}
+
+label{
+    color: black;
+    font-style: initial;
+}

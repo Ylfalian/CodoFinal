@@ -1,0 +1,291 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poltawski Nowy', serif;
+}
+
+
+/*NavBar*/
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255)
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.623);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li{
+    margin: 0 30px;
+    height: auto;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/*Foto portada*/
+
+header {
+    width: 100vw;
+    height: 60vh;
+    background-image: url(../Images/image-portada.jpg);
+    filter: brightness(0.6);
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.header-content {
+    margin-bottom: 150px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.header-content h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+}
+.header-content h2 {
+    font-size: 4vmin;
+}
+
+.line {
+    width: 170px;
+    height: 4px;
+    background: rgb(8, 174, 220);
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/*Diseño*/
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(9, 74, 136);
+}
+
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+} 
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+/* Footer*/
+
+.footer{
+    width: 100%;
+    background: rgb(7, 7, 7);
+}
+
+.colum{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ede6de;
+    padding: 5px;
+    text-align: center;
+}
+
+.mapa{
+    width: 100%;
+}
+
+.mapa p{
+    padding-bottom: 8px;
+}
+
+.mapa iframe{
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 0 8px 2px rgba(43, 43, 43, 0.842);
+    height: 320px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-direction: row;
+    color: #ede6ded3;
+    padding-top: 10px;
+}
+
+.sucursales{
+    width: 40%;
+    text-align: center;
+}
+
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-links ul, li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.list-inline-item i{
+    padding: 10px;
+}
+
+.footer-copyright{
+    width: 100%;
+    text-align: center;
+    color: #ede6de;
+}
+
+.api{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width:850px){
+    .navbar {
+        padding:0;
+    }
+    .logo {
+        position: absolute;
+        top:30px;
+        left: 30px;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        /*        background:rgba(8, 174, 220, 0.652) ;*/
+        margin-top: -900px;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu {
+        margin-top: 0px;
+       /* border-bottom-right-radius: 288px; si le agregamos el backroung celeste podemos darle
+       un estilo al borde */
+    }
+    .nav-links li {
+        margin: 30px auto;
+    }
+    .menu-btn {
+        display: block;
+        background:rgba(8, 174, 220, 0.686);
+        border-radius: 6px;
+    }
+}

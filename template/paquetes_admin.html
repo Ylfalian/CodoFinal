@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="shortcut icon" href="./ico/carrito-de-compras.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/paquetes.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+
+    <header>
+        <!--NavBar-->
+        <nav class="navbar">
+            <h1 class="logo">TURISTEANDO</h1>
+            <ul class="nav-links">
+                <li class="btn-nav"><a href="index.html">Inicio</a></li>
+                <li class="btn-nav"><a href="dondeir.html">Dónde ir</a></li>
+                <li class="btn-nav"><a href="paquetes.html">Paquetes</a></li>
+                <li class="btn-nav"><a href="paquetes_admin.html">Panel Administrativo</a></li>
+                <li class="btn-nav"><a href="quehacer.html">Qué hacer</a></li>
+                <li class="btn-nav"><a href="nosotros.html">Sobre Nosotros</a></li>
+            </ul>
+            <img src="../Icons/menu.png" class="menu-btn" alt="Menu">
+        </nav>
+        <div class="header-content">
+            <h2>Aprovecha Las Ofertas Que Tenemos Para Vos!!!</h2>
+            <div class="line"></div>
+            <h1>TU GUÍA DE TURISMO POR EL PAÍS</h1>
+        </div>
+    </header>
+    <br>
+
+    <main>
+        <div id="app" class="container">
+            <h1 style="color: black;">Productos</h1>
+            <a class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
+            <br>
+            <div v-if="error">
+                <p>Lo sentimos , ........</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+                <section v-else>
+                    <div class="pack">
+                        <div class="tarjeta" v-for="producto in productos">
+                            <img  :src="producto.imagen" :alt="producto.nombre">
+                            <h2>{{producto.nombre}}</h2>
+                            <h3>Precio: {{producto.precio}}$</h3>
+                            <h4>Días: {{producto.stock}}</h4>
+                            <a class="btn btn-primary"  :href="'producto_update.html?id='+ producto.id" >Editar</a>
+                            <a type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</a>
+                        </div>
+                    </div>    
+                </section>
+            </div>
+        </div>
+    </main>
+<br>
+ <!--Footer-->
+ <div id="footer" class="footer">
+    <div class="colum">
+        <div class="mapa">
+            <p>Atención al cliente: 0800 123 1234 Lunes a viernes de 10 a 21hs. Sábados de 10 a 16hs.</p>
+            <iframe id="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.712423486534!2d-64.25265982345903!3d-31.394492095194916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329f2e20895265%3A0xf6dab6c01a51609a!2zRGXDoW4gRnVuZXMgNTI3OSwgQ8OzcmRvYmE!5e0!3m2!1ses-419!2sar!4v1683244585601!5m2!1ses-419!2sar"
+                allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+    <div class="row">
+        <div class="sucursales">
+            <p class="sucur">
+                SUCURSALES
+                <br><br>
+                · Casa Central Córdoba Capital <br>
+                Av. Hipólito Yrigoyen 433. Nueva Córdoba.
+                <br><br>
+                · Carlos Paz <br>
+                Lisandro De La Torre 116 Local 2 – Tel: 03541 420669
+                <br><br>
+                · Pilar <br>
+                9 de Julio esq. Zenón López – Tel: 03572 – 471139
+            </p>
+        </div>
+        <div class="redes">
+            <p>NUESTRAS REDES</p>
+            <div class="footer-links">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank"><i
+                    class="fab fa-instagram" style="font-size: 50px;"></i></a></li>
+                    <li class="list-inline-item" style="font-size: 50px;"><a href="https://www.facebook.com/" target="_blank"><i
+                    class="fab fa-facebook" style="font-size: 50px;"></i></a></li>
+                    <li class="list-inline-item" style="font-size: 50px;"><a href="https://twitter.com/" target="_blank"><i
+                    class="fab fa-twitter" style="font-size: 50px;"></i></a></li>
+                    <li class="list-inline-item"><a href="https://github.com/" target="_blank"><i
+                    class="fab fa-github" style="font-size: 50px;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p>Turisteando 2023. Todos los derechos reservados</p>
+    </div>
+</div>
+<src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+<script src="../js/productos.js"></script>
+<script src="../js/producto_editar.js"></script>
+
+</body>
+</html>
