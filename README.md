@@ -29,3 +29,23 @@ DNI:41331667
 
 Jhonatan Alejandro Ovando Saavedra
 DNI:94820865
+
+
+# TP Final 
+
+Continuamos el desarrollo de la pagina en la que veniamos trabajando. Perdimos algunos intengrantes en el camino(Al final estaran anotados lo que quedamos).
+Se añadieron varias vistas. Entre ellas el "Panel de administrador" donde podemos agregar y eliminar los paquetes(cards), la vista de compra donde se compra (valga la redundancia) esta nos traslada al formulario de compra donde se efectua la misma. Tambien hay dos vistas para agregar los productos y para editarlos (pequeños formularios), planeamos mejorar su estilo o cambiarlos. 
+
+Planeamos seguir trabajando en este proyecto e ir actualizandolo aun despues de terminar el curso.
+
+*El CRUD es funcional, se puede acceder sin contraseña a la vista de administrador (Facil testeo), tenemos una vista de login donde a futuro se planea agregar autentificacion para acceder a la vista de admin.
+
+Esta parte final esta programada por:
+
+Matias Alejandro Bevione 
+DNI:34290814
+
+Ramiro Santiago Perez Zavaleta
+DNI:41331667
+
+El resto decidio dejar el curso por motivos personales.
